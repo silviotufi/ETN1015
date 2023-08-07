@@ -1,0 +1,10 @@
+n=-50:50
+x1=sin(0.125*pi*n)
+subplot(2,1,1)
+stem(n,x1,"filled")
+title('$x_1(n)=sin(0.125\pi n)$',Interpreter='latex')
+subplot(2,1,2)
+[x2 n2]=dnsample(x1,n,4)
+stem(n2,x2,'filled','k')
+title('$x_2=x_1(4n)$',Interpreter='latex')
+xlabel('n'),ylabel('x2')
