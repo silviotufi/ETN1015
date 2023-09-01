@@ -1,7 +1,10 @@
 n=0:100
-b=[1 2 0 1]
-a=[1 -0.5 0.25]
-y=filter(b,a,xn)
+b=[-1 -13]
+a=[1 1 -6]
 xn=Imp(0,n)
-stem(y,'filled')
+y=filter(b,a,xn)
+stem(n,y,'filled')
 xlim([0 100])
+hold on 
+hn=(2*(-3).^n)-3*(2.^n)
+stem(n,hn,'r')
